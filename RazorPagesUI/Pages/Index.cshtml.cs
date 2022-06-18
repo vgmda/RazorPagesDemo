@@ -17,7 +17,10 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        if (string.IsNullOrWhiteSpace(FirstName))
+        {
+            FirstName = "User";
+        }
     }
 }
 
