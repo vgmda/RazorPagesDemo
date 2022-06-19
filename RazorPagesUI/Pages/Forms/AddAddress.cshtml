@@ -3,29 +3,50 @@
 @{ ViewData["Title"] = "Add Address";
 }
 
-<h1>Add Address</h1>
-<form method="post">
-    <input type="text" asp-for="Address.StreetAddress" placeholder="Street Address" />
-    <input type="text" asp-for="Address.City" placeholder="City" />
-    <input type="text" asp-for="Address.State" placeholder="State" />
-    <input type="text" asp-for="Address.ZipCode" placeholder="Zip Code" />
-    <button type="submit">Submit</button>
-</form>
+<h1>Add a new Address</h1>
+@*<form method="post">
+        <input type="text" asp-for="Address.StreetAddress" placeholder="Street Address" />
+        <input type="text" asp-for="Address.City" placeholder="City" />
+        <input type="text" asp-for="Address.State" placeholder="State" />
+        <input type="text" asp-for="Address.ZipCode" placeholder="Zip Code" />
+        <button type="submit">Submit</button>
+    </form>*@
 
 
 <form method="post" class="col-md-6">
     <div class="form-group">
-        <label>Street Address</label>
-        <input type="text" class="form-control" asp-for="Address.StreetAddress" placeholder="Enter Address" />
-        <small class="form-text text-muted">Test small text.</small>
+        <label>Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter your name" />
+        @*<small class="form-text text-muted">Enter your First Name and Second Name</small>*@
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" class="form-control" placeholder="Enter your phone number" />
+        @*<small class="form-text text-muted">May be used to assist delivery</small>*@
+    </div>
+    <div class="form-group">
+        <label>Postcode</label>
+        <input type="text" class="form-control" asp-for="Address.Postcode" placeholder="Enter your area postcode" />
+    </div>
+    <div class="form-group">
+        <label>Address Line 1</label>
+        <input type="text" class="form-control" asp-for="Address.StreetAddress1" placeholder="Enter your street name" />
+    </div>
+    <div class="form-group">
+        <label>Address Line 2 (optional)</label>
+        <input type="text" class="form-control" asp-for="Address.StreetAddress2" placeholder="Optional area name" />
     </div>
     <div class="form-group">
         <label>City</label>
-        <input type="text" class="form-control" asp-for="Address.City" placeholder="Enter City" />
+        <input type="text" class="form-control" asp-for="Address.City" placeholder="Enter your city" />
+    </div>
+    <div class="form-group">
+        <label>County</label>
+        <input type="text" class="form-control" asp-for="Address.County" placeholder="Enter the county name" />
     </div>
     <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="exampleCheck1">Make this my default address</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
