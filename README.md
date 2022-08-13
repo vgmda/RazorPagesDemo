@@ -1,3 +1,3 @@
 # RazorPagesDemo
 
-> RazorPagesUI
+> Razor is a markup syntax that lets the developer embed server-based code (Visual Basic and C#) into web pages. Server-based code can create dynamic web content on the fly, while a web page is written to the browser. When a web page is called, the server executes the server-based code inside the page before it returns the page to the browser. By running on the server, the code can perform complex tasks, like accessing databases. Razor is based on ASP.NET, and designed for creating web applications. It has the power of traditional ASP.NET markup, but it is easier to use, and easier to learn.
